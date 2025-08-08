@@ -177,7 +177,7 @@ case $SELFHEAL_TYPE in
 
         # Checking XdnsSsp PID
         XDNS_PID=`pidof CcspXdnsSsp`
-        if [ "$XDNS_PID" = "" ] && [ "$Box_Type" != "bpi" ]; then
+        if [ "$XDNS_PID" = "" ] && [ "$BOX_TYPE" != "bpi" ]; then
             echo_t "RDKB_PROCESS_CRASHED : CcspXdnsSsp_process is not running, need restart"
             resetNeeded xdns CcspXdnsSsp
 

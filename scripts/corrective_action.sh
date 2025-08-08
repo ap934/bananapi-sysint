@@ -525,7 +525,7 @@ resetNeeded()
             storeInformation
 
             enable_TR69_Binary=$(syscfg get EnableTR69Binary)
-            if [ "$ProcessName" == "CcspTr069PaSsp" ] && [ "$Box_Type" == "bpi" ] && [ "$enable_TR69_Binary" = "false" ]; then
+            if [ "$ProcessName" == "CcspTr069PaSsp" ] && [ "$BOX_TYPE" == "bpi" ] && [ "$enable_TR69_Binary" = "false" ]; then
                echo_t "RDKB_SELFHEAL : CcspTr069PaSsp and enable_TR69_Binary is disabled"
             else
 	       vendor=`getVendorName`
@@ -626,7 +626,7 @@ resetNeeded()
             elif [ "$SELFHEAL_TYPE" = "BASE" ] && [ "$ProcessName" == "CcspTr069PaSsp" ]
             then
                 enable_TR69_Binary=$(syscfg get EnableTR69Binary)
-                if [ "$enable_TR69_Binary" = "false" ] && [ "$Box_Type" == "bpi" ]; then
+                if [ "$enable_TR69_Binary" = "false" ] && [ "$BOX_TYPE" == "bpi" ]; then
                    echo_t "EnableTR69Binary disabled not restarting TR69_process" 
                 else
                    echo_t "RDKB_SELFHEAL : Resetting process $ProcessName"
